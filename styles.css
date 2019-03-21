@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 15vh;
+  background-color: black;
+  color: white;
+}
+
+.filters{
+  background-color: white;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listItems {
+  padding-top: 15vh;
+}
+
+.listItem {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexLine {
+  padding: 10px;
+  flex: 1;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.food {
+  background-color: pink;
+}
+
+.bills {
+  background-color: lightgreen;
+}
+
+.clothing {
+  background-color: lightblue;
+}
+
+#new {
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
