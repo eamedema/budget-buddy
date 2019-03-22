@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>jQuery API 1</title>
+    <title>Budget Buddy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/teal-star-favicon.ico" />    
+    
   </head> 
   <body>
-    <div id="container">
+    <div id="top-container">
 
       <div class="header">
         <h1>$1,000</h1>
+        <!-- <p>Amount Remaining</p> -->
         <div class="filters">
           <p>filters</p>
         </div>
@@ -21,23 +25,26 @@
           <h3>total</h3>
         </div>
       </div>
+    </div>  
 
+
+<div id="table-container">
       <div id="listItems">
 
         <div class="listItem food">
-          <div class="entry date">12/30/18</div>
-          <div class="entry name">Bought Doughnuts</div>
+          <div class="entry date" id="left">12/30/18</div>
+          <div class="entry name" id="left">Bought Doughnuts</div>
           <div class="entry price">$500</div>
         </div>
         <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry name">Dentist</p>
-          <p class="entry" id="price">$200</p>
+          <p class="entry date" id="left">01/20/19</p>
+          <p class="entry name" id="left">Dentist</p>
+          <p class="entry price">$200</p>
         </div>
         <div class="listItem clothing">
-          <p class="entry" >01/24/19</p>
-          <p class="entry name">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
+          <p class="entry date" id="left">01/24/19</p>
+          <p class="entry name" id="left">TJ Maxxxxxxx</p>
+          <p class="entry price">$400</p>
         </div>
         <div class="listItem food">
           <p class="entry">12/30/18</p>
@@ -116,46 +123,23 @@
         </div>
         <div class="listItem food">
           <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
+          <p class="entry">ghjfghfghgfhg</p>
           <p class="entry">$500</p>
         </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
+
       </div>
+
+      </div>
+
+
+
       <div id="new">
         <div class="button">
           <h2>new</h2>
         </div>
       </div>
-    </div>
+
+
 
     <script
       src="http://code.jquery.com/jquery-3.3.1.min.js"
