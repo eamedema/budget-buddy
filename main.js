@@ -19,14 +19,14 @@ $(()=>{
 
   function submitEntry(){
     type = $('.category').val()
-    date = $('.dateOfEntry').text()
-    name = $('.nameInput').text()
+    date = $('.dateOfEntry').val()
+    name = $('.nameInput').val()
     amount = $('.amountSpent').val()
 
     $('#listItems').append(`<div class="listItem ${type}">
     <p class="entry date">${date}</p>
     <p class="entry name">${name}</p>
-    <p class="entry amount">${amount}<p>
+    <p class="entry amount">${amount}</p>
     </div>`);
 
     total -= amount;
