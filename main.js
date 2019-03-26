@@ -1,5 +1,7 @@
 $(()=>{
 
+  $('#newEntry').hide()
+
   let total;
   let type;
   let date;
@@ -18,15 +20,20 @@ $(()=>{
   $('.saveButton').on('click', submitEntry);
 
   function submitEntry(){
-    type = $('.category').val()
+    type = $('#spending-select').val()
     date = $('.dateOfEntry').val()
     name = $('.nameInput').val()
     amount = $('.amountSpent').val()
 
+    console.log(type);
+    console.log(date);
+    console.log(name);
+    console.log(amount);
+
     $('#listItems').append(`<div class="listItem ${type}">
-    <p class="entry date">${date}</p>
-    <p class="entry name">${name}</p>
-    <p class="entry amount">${amount}</p>
+    <p class="entry date" id="left">${date}</p>
+    <p class="entry name" id="left">${name}</p>
+    <p class="entry price">$${amount}</p>
     </div>`);
 
     total -= amount;
@@ -96,7 +103,13 @@ $(()=>{
     $('.food').hide()
   });
 
-  let totalValue = 
+  $('#new').on('click', ()=>{
+    $('#newEntry').show()
+  });
+
+  $('#buttonId').on('click', ()=>{
+    $('#newEntry').hide()
+  });
 
 
 });
