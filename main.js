@@ -96,5 +96,7 @@ $(()=>{
     $('.food').hide()
   });
 
+  let totalValue = 
+
 
 });

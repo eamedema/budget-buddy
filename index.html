@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -21,11 +20,11 @@
   </div>
 
   <div class="filters">
-    <button class="active btn" id="all">SHOW ALL</button>
-    <button class="btn" id="food">FOOD</button>
-    <button class="btn" id="bills">BILLS</button>
-    <button class="btn" id="clothing">CLOTHING</button>
-    <button class="btn" id="entertain">ENTERTAINMENT</button>
+    <button class="active btn" id="all">Show All</button>
+    <button class="btn" id="a">Show A</button>
+    <button class="btn" id="b">Show B</button>
+    <button class="btn" id="c">Show C</button>
+    <button class="btn" id="d">Show D</button>
   </div>
 
   <div class="titles">
@@ -221,39 +220,36 @@
       </div>
 </div>
 
+<div id="newEntry" class="entry hide show">
+    <div class="modal">
 
+    <div class="top">
+    <h3>New Entry</h3>
+    </div>
 
+      <div class="inputAreas">
+        <div class="box">
+          <select id="spending-select">
+            <option value="">-Choose A Category-</option>
+            <option value="clothing">Clothing</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food</option>
+            <option value="bills">Bills</option>
+          </select>
+        </div>
 
+        <input class="dateOfEntry" type="date" id="date">
+        <input class="nameInput" type="text" id="nameOfItem" placeholder="What Did You Buy?">
+        <input class="amountSpent" type="number" min="0.01" step="0.01" placeholder="$0.00">
 
+      </div>
 
-
-
-    <!-- <div id="newEntry" class="entry hide">
-          <div class="callout">
-              <button type="button" class="close-button" >&times;</button>
-          </div>
-            <h3>New Entry</h3>
-            <div class="categories">
-              <select class="category">
-                <option class="entertainment" value="entertainment">Entertainment</option>
-                <option class="food" value="food">Food</option>
-                <option class="clothing" value="clothing">Clothing</option>
-                <option class="bills" value="bills">Bills</option>
-              </select>
-            </div>
-            <div class="dates">
-              <input class="dateOfEntry" type="date" id="date">
-            </div>
-            <div class="name">
-              <input class="nameInput" type="text" id="nameOfItem">
-            </div>
-            <div class="amount">
-              <input class="amountSpent" type="number" min="0.01" step="0.01">
-            </div>
-            <div class="save">
-              <a class="saveButton" href="#">Save</a>
-            </div>
-          </div> -->
+      <div id="buttonId" class="buttonClass">
+        <a class="saveButton" href="#">Save</a>
+        <a class="closeButton" href="#">Cancel</a>
+      </div>
+      </div>
+  </div>
       <script
       src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -261,3 +257,4 @@
     <script src="main.js"></script>
   </body>
 </html>
+>>>>>>> master
