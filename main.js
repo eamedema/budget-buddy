@@ -14,6 +14,7 @@ $(()=>{
     $('.enterTotal').hide();
   }
 
+
   $('.saveButton').on('click', submitEntry);
 
   function submitEntry(){
