@@ -7,38 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="shortcut icon" href="imgs/teal-star-favicon.ico" />    
+    <!-- <link rel="shortcut icon" href="imgs/teal-star-favicon.ico" />     -->
     
   </head> 
   <body>
-    <div id="container">
+<div id="header-container">
 
-      <div class="header">
-        <h1>$1,000</h1>
-        <!-- <p>Amount Remaining</p> -->
-        <div class="total">
-          <button class="enterTotal">ENTER BUDGET</button>
-        </div>
-        <div class="filters">
-          <p>filters</p>
-        </div>
-        <div class="titles">
-          <h3>date</h3>
-          <h3>name</h3>
-          <h3>total</h3>
-        </div>
+  <div class="header">
+    <div class="total">
+    <a class="enterTotal">ENTER BUDGET</a>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="active btn" id="all">Show All</button>
+    <button class="btn" id="a">Show A</button>
+    <button class="btn" id="b">Show B</button>
+    <button class="btn" id="c">Show C</button>
+    <button class="btn" id="d">Show D</button>
+  </div>
+
+  <div class="titles">
+      <h3>date</h3>
+      <h3>name</h3>
+      <h3>total</h3>
+     </div>
+
+</div>
+
+<div id="entries-container">
+
+  <div id="listItems">
+    <div class="listItem food">
+      <p class="entry date" id="left">12/30/18</p>
+      <p class="entry name" id="left">ITEM ONE</p>
+      <p class="entry price">$500</p>
+    </div>
+    <div class="listItem bills">
+      <p class="entry date" id="left">01/20/19</p>
+      <p class="entry name" id="left">ITEM TWO</p>
+      <p class="entry price">$200</p>
+    </div>
+    <div class="listItem clothing">
+      <p class="entry date" id="left">01/24/19</p>
+      <p class="entry name" id="left">TJ Maxxxxxxx</p>
+      <p class="entry price">$400</p>
+    </div>
+    <div class="listItem food">
+        <p class="entry date" id="left">12/30/18</p>
+        <p class="entry name" id="left">Bought Doughnuts</p>
+        <p class="entry price">$500</p>
       </div>
-      <div id="listItems">
-
-        <div class="listItem food">
-          <div class="entry date" id="left">12/30/18</div>
-          <div class="entry name" id="left">Bought Doughnuts</div>
-          <div class="entry price">$500</div>
-        </div>
-        <!-- <button class="button">button</button> -->
-        <div class="listItem food">
-          <p class="entry date">12/30/18</p>
-          <p class="entry name">Bought Doughnuts</p>
+      <div class="listItem bills">
+        <p class="entry date" id="left">01/20/19</p>
+        <p class="entry name" id="left">TESTING LINE 63</p>
+        <p class="entry price">$200</p>
+      </div>
+      <div class="listItem clothing">
+        <p class="entry date" id="left">01/24/19</p>
+        <p class="entry name" id="left">TJ Maxxxxxxx</p>
+        <p class="entry price">$400</p>
+      </div>
+      <div class="listItem food">
+          <p class="entry date" id="left">12/30/18</p>
+          <p class="entry name" id="left">Bought Doughnuts</p>
           <p class="entry price">$500</p>
         </div>
         <div class="listItem bills">
@@ -50,129 +82,143 @@
           <p class="entry date" id="left">01/24/19</p>
           <p class="entry name" id="left">TJ Maxxxxxxx</p>
           <p class="entry price">$400</p>
-        </div>
+        </div>   
         <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">hgfmhfhfjhs</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-        <div class="listItem food">
-          <p class="entry">12/30/18</p>
-          <p class="entry">Bought Doughnuts</p>
-          <p class="entry">$500</p>
-        </div>
-        <div class="listItem bills">
-          <p class="entry">01/20/19</p>
-          <p class="entry">Dentist</p>
-          <p class="entry">$200</p>
-        </div>
-        <div class="listItem clothing">
-          <p class="entry">01/24/19</p>
-          <p class="entry">TJ Maxxxxxxx</p>
-          <p class="entry">$400</p>
-        </div>
-
+            <p class="entry date" id="left">12/30/18</p>
+            <p class="entry name" id="left">Bought Doughnuts</p>
+            <p class="entry price">$500</p>
+          </div>
+          <div class="listItem bills">
+            <p class="entry date" id="left">01/20/19</p>
+            <p class="entry name" id="left">Dentist</p>
+            <p class="entry price">$200</p>
+          </div>
+          <div class="listItem clothing">
+            <p class="entry date" id="left">01/24/19</p>
+            <p class="entry name" id="left">TJ Maxxxxxxx</p>
+            <p class="entry price">$400</p>
+          </div>
+          <div class="listItem food">
+              <p class="entry date" id="left">12/30/18</p>
+              <p class="entry name" id="left">Bought Doughnuts</p>
+              <p class="entry price">$500</p>
+            </div>
+            <div class="listItem bills">
+              <p class="entry date" id="left">01/20/19</p>
+              <p class="entry name" id="left">Dentist</p>
+              <p class="entry price">$200</p>
+            </div>
+            <div class="listItem clothing">
+              <p class="entry date" id="left">01/24/19</p>
+              <p class="entry name" id="left">TJ Maxxxxxxx</p>
+              <p class="entry price">$400</p>
+            </div>
+            <div class="listItem food">
+                <p class="entry date" id="left">12/30/18</p>
+                <p class="entry name" id="left">Bought Doughnuts</p>
+                <p class="entry price">$500</p>
+              </div>
+              <div class="listItem bills">
+                <p class="entry date" id="left">01/20/19</p>
+                <p class="entry name" id="left">TESTING LINE 123</p>
+                <p class="entry price">$200</p>
+              </div>
+              <div class="listItem clothing">
+                <p class="entry date" id="left">01/24/19</p>
+                <p class="entry name" id="left">TJ Maxxxxxxx</p>
+                <p class="entry price">$400</p>
+              </div>
+              <div class="listItem food">
+                  <p class="entry date" id="left">12/30/18</p>
+                  <p class="entry name" id="left">Bought Doughnuts</p>
+                  <p class="entry price">$500</p>
+                </div>
+                <div class="listItem bills">
+                  <p class="entry date" id="left">01/20/19</p>
+                  <p class="entry name" id="left">Dentist</p>
+                  <p class="entry price">$200</p>
+                </div>
+                <div class="listItem clothing">
+                  <p class="entry date" id="left">01/24/19</p>
+                  <p class="entry name" id="left">TJ Maxxxxxxx</p>
+                  <p class="entry price">$400</p>
+                </div>
+                <div class="listItem food">
+                    <p class="entry date" id="left">12/30/18</p>
+                    <p class="entry name" id="left">Bought Doughnuts</p>
+                    <p class="entry price">$500</p>
+                  </div>
+                  <div class="listItem bills">
+                    <p class="entry date" id="left">01/20/19</p>
+                    <p class="entry name" id="left">Dentist</p>
+                    <p class="entry price">$200</p>
+                  </div>
+                  <div class="listItem clothing">
+                    <p class="entry date" id="left">01/24/19</p>
+                    <p class="entry name" id="left">TJ Maxxxxxxx</p>
+                    <p class="entry price">$400</p>
+                  </div>
+                  <div class="listItem food">
+                      <p class="entry date" id="left">12/30/18</p>
+                      <p class="entry name" id="left">Bought Doughnuts</p>
+                      <p class="entry price">$500</p>
+                    </div>
+                    <div class="listItem bills">
+                      <p class="entry date" id="left">01/20/19</p>
+                      <p class="entry name" id="left">Dentist</p>
+                      <p class="entry price">$200</p>
+                    </div>
+                    <div class="listItem clothing">
+                      <p class="entry date" id="left">01/24/19</p>
+                      <p class="entry name" id="left">TJ Maxxxxxxx</p>
+                      <p class="entry price">$400</p>
+                    </div>
+                    <div class="listItem food">
+                        <p class="entry date" id="left">12/30/18</p>
+                        <p class="entry name" id="left">Bought Doughnuts</p>
+                        <p class="entry price">$500</p>
+                      </div>
+                      <div class="listItem bills">
+                        <p class="entry date" id="left">01/20/19</p>
+                        <p class="entry name" id="left">Dentist</p>
+                        <p class="entry price">$200</p>
+                      </div>
+                      <div class="listItem clothing">
+                        <p class="entry date" id="left">01/24/19</p>
+                        <p class="entry name" id="left">OUTLET MALL</p>
+                        <p class="entry price">$400</p>
+                      </div>               
+                      <div class="listItem food" id="parent">
+                          <p class="entry date" id="left">12/30/18</p>
+                          <p class="entry name" id="left">PIZZZZAAA</p>
+                          <p class="entry price">$500</p>
+                        </div>
+                        <div class="listItem bills" id="parent">
+                          <p class="entry date" id="left">01/20/19</p>
+                          <p class="entry name" id="left">HOUSE</p>
+                          <p class="entry price">$200</p>
+                        </div>
+                        <div class="listItem clothing" id="parent">
+                          <p class="entry date" id="left">01/24/19</p>
+                          <p class="entry name" id="left">LAST LIST ITEM</p>
+                          <p class="entry price">$400</p>
+                        </div>
+  </div>
+</div>
+<!-- <div class="spacer"></div> -->
+<!-- 
+<div id="parent">
+  <div class="box a b">A &amp; B</div>
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+</div> -->
+<div id="footer-container">
+      <div class ="button" id="new">
+          <h2>NEW ENTRY</h2>
       </div>
-
-      </div>
-
-
-
-      <div id="new">
-        <div class="button">
-          <h2>new</h2>
-        </div>
-      </div>
+</div>
 
 
 
@@ -212,8 +258,7 @@
               <a class="saveButton" href="#">Save</a>
             </div>
           </div> -->
-
-    <script
+      <script
       src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
