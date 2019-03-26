@@ -12,7 +12,7 @@ body, html {
   border: none;
   height: 100vh;
   font-family: 'Lato', sans-serif;
-  
+
 
 }
 #entries-container {
@@ -82,7 +82,10 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column; */
+<<<<<<< HEAD
   border: 3px solid red;
+=======
+>>>>>>> da5031c0e528a6ae3fa1912121ab49c4f3233b24
   width: 100vw;
   padding:  0;
   margin: 0;
@@ -182,7 +185,6 @@ h3 {
   color: white;
 }
 
-
 .top {
     display: flex;
     background-color: #a0a8b2;
@@ -208,7 +210,7 @@ h3 {
     bottom: 50%;
     right: 50%;
     margin: 0px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .box select {
@@ -260,7 +262,7 @@ a {
     flex-direction: column;
     align-content: center;
     width: 100vw;
-    padding-bottom: 10px;   
+    padding-bottom: 10px;
 }
 
 .saveButton:hover {
@@ -290,7 +292,7 @@ a {
     padding: 25px 30px;
     background-color: #a0a8b2;
     width: 80%;
-} 
+}
 
 
 
@@ -308,7 +310,7 @@ a {
       margin-top: 100px;
       display: flex;
   }
-  
+
   .formEntry {
       display: flex;
       background-color: white;
@@ -319,7 +321,7 @@ a {
       justify-content: center;
       box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
   }
-  
+
   .modal {
       display: flex;
       flex-direction: column;
@@ -329,51 +331,50 @@ a {
       align-items: center;
       margin: 0;
   }
-  
+
   .top {
       width: 350px;
       height: 75px;
       background-color: white;
   }
-  
+
   .formHeader {
       color: black;
       font-size: 50px;
   }
-  
+
   .box select {
       background-color: white;
       border: 1px solid #dddddd;
       font-size: 15px;
   }
-  
+
   input {
       background-color: white;
       border: 1px solid #dddddd;
   }
-  
+
   .inputAreas {
       width: 300px;
       padding: 0;
   }
-  
+
   .buttonClass {
       width: 300px;
   }
-  
+
   .saveButton {
       border-radius: 2px;
       padding: 8px 30px;
       width: 100%;
       margin-bottom: 2%;
   }
-  
+
   .closeButton {
       border-radius: 2px;
       padding: 8px 30px;
       width: 100%;
       margin-bottom: 2%;
-  } 
-  
   }
-  
+
+  }
