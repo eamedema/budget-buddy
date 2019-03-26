@@ -10,8 +10,8 @@ $(()=>{
 
   function totalMoney(){
     total = prompt("How much money you got?","Enter a number");
-    $('.total').append(`<h1>$${total}</h1>`);
-    $('.total').removeClass('enterTotal');
+    $('.total').append(`<h1 class="totalRemaining">$${total}</h1>`);
+    $('.enterTotal').hide();
   }
 
 
@@ -35,6 +35,19 @@ $(()=>{
   };
 
 
+
+
+
+  let $btns = $('.btn').click(function() {
+    if (this.id == 'all') {
+      $('#parent > div').fadeIn(450);
+    } else {
+      var $el = $('.' + this.id).fadeIn(450);
+      $('#parent > div').not($el).hide();
+    }
+    $btns.removeClass('active');
+    $(this).addClass('active');
+  })  
 
 
 });

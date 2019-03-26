@@ -1,30 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
-  /* padding: 0; */
-  font-family: 'Lato', sans-serif;
-
+  padding: 0;
 }
 
-/* #top-container {
-  height: 200px;
-} */
+body, html {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  
+
+}
+#entries-container {
+  overflow: scroll;
+  display: flex;
+  padding-top: 22vh;
+  padding-bottom: 5vh;
+}
+#header-container {
+  position: fixed;
+}
 
 .header {
-  /* position: fixed; */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 10%;
-  background-color: red;
-  color: white;
-  padding-top: 40px;
+  height: 9vh;
+  padding: 10px;
+  background-color: black;
 }
-h1 {
-  padding: 20px;
-}
+
+
+
 div {
   text-align: right;
 }
@@ -36,51 +49,52 @@ div {
   background-color: white;
   color: black;
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  height: 10%;
+  padding: 10px;
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .titles{
+  position: fixed;
   width: 100%;
-  height: 20px;
+  height: 7vh;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: start; */
   align-items: center;
   padding: 20px;
-  /* margin: 10px 0; */
   background-color: black;
   text-transform: uppercase;
+  text-align: right;
   letter-spacing: 3px;
+  color: white;
 
 }
 h3 {
-  margin: 20px;
+  /* margin: 20px; */
+  text-align: left;
 }
 
 #listItems {
-  padding-top: 1vh;
-  padding-bottom: 10vh;
-
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-
+  flex-direction: column; */
+  border: 3px solid red;
+  width: 100vh;
+  padding:  0;
+  margin: 0;
 }
 
 .listItem {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .entry {
   padding: 10px;
-  flex: 1;
   border: 1px solid blue;
 }
 .date {
@@ -89,9 +103,9 @@ h3 {
 .name {
   flex: 3;
 }
-.total {
+.price {
   flex: 1;
-  
+  /* margin: auto 0; */
 }
 
 .food {
@@ -108,13 +122,258 @@ h3 {
 
 #new {
   position: fixed;
-  bottom: 0;
-  height: 10vh;
-  width: 100%;
 
+  bottom: 0;
+  height: 7vh;
+  width: 100%;
+  letter-spacing: 3px;
   background-color: black;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.enterTotal {
+  text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+}
+
+
+.btn {
+  border: none;
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 3px;
+  font-family: Arial;
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.active {
+  background: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+/* .filterbox {
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  padding: 10px;
+  height: 100px;
+  width: calc(25% - 10px);
+  float: left;
+  margin: 5px;
+  text-align: center;
+  border-radius: 3px;
+  color: teal;
+} */
+.spacer {
+  clear: both;
+  height: 20px;
+}
+
+.totalRemaining {
+  text-align: center;
+  color: white;
+}
+
+
+.top {
+    display: flex;
+    background-color: #a0a8b2;
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formHeader {
+    font-size: 65px;
+    font-weight: 100;
+    color: white;
+    /* height: 30%; */
+    /* background-color: black; */
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    margin: 0px;
+    margin-bottom: 5px; 
+}
+
+.box select {
+    padding: 10px;
+    width: 100vw;
+    height: 50px;
+    background-color: #dddddd;
+    /* margin: 10px;
+    margin-right: 45px; */
+    /* border: none; */
+    font-size: 20px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.inputAreas {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+input {
+    padding: 15px;
+    margin: 0px;
+    background-color: #dddddd;
+    border: none;
+    margin-bottom: 5px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.buttonClass {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100vw;
+    padding-bottom: 10px;   
+}
+
+.saveButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+
+.closeButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+
+.saveButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+    margin-bottom: 4%;
+}
+
+.closeButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+} 
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+  #newEntry {
+      position: absolute;
+      width: 370px;
+      height: 400px;
+      background: white;
+      margin-top: 100px;
+      display: flex;
+  }
+  
+  .formEntry {
+      display: flex;
+      background-color: white;
+      border-radius: 4px;
+      height: 400px;
+      width: 400px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+  }
+  
+  .modal {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: 400px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+  }
+  
+  .top {
+      width: 350px;
+      height: 75px;
+      background-color: white;
+  }
+  
+  .formHeader {
+      color: black;
+      font-size: 50px;
+  }
+  
+  .box select {
+      background-color: white;
+      border: 1px solid #dddddd;
+      font-size: 15px;
+  }
+  
+  input {
+      background-color: white;
+      border: 1px solid #dddddd;
+  }
+  
+  .inputAreas {
+      width: 300px;
+      padding: 0;
+  }
+  
+  .buttonClass {
+      width: 300px;
+  }
+  
+  .saveButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  }
+  
+  .closeButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  } 
+  
+  }
+  
