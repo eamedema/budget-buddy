@@ -38,16 +38,63 @@ $(()=>{
 
 
 
-  let $btns = $('.btn').click(function() {
-    if (this.id == 'all') {
-      $('#parent > div').fadeIn(450);
-    } else {
-      var $el = $('.' + this.id).fadeIn(450);
-      $('#parent > div').not($el).hide();
-    }
-    $btns.removeClass('active');
-    $(this).addClass('active');
-  })  
+  // let $btns = $('.btn').click(function() {
+  //   if (this.id == 'all') {
+  //     $('#parent > div').fadeIn(450);
+  //   } else {
+  //     var $el = $('.' + this.id).fadeIn(450);
+  //     $('#parent > div').not($el).hide();
+  //   }
+  //   $btns.removeClass('active');
+  //   $(this).addClass('active');
+  // })
+
+  $('#all').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+  });
+
+  $('#food').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.clothing').hide()
+    $('.entertain').hide()
+  });
+
+  $('#bills').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.food').hide()
+    $('.clothing').hide()
+    $('.entertain').hide()
+  });
+
+  $('#clothing').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.food').hide()
+    $('.entertain').hide()
+  });
+
+  $('#entertain').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.clothing').hide()
+    $('.food').hide()
+  });
 
 
 });
