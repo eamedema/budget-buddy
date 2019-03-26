@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -159,7 +161,7 @@ h3 {
   background: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-.box {
+/* .filterbox {
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   padding: 10px;
   height: 100px;
@@ -169,7 +171,7 @@ h3 {
   text-align: center;
   border-radius: 3px;
   color: teal;
-}
+} */
 .spacer {
   clear: both;
   height: 20px;
@@ -179,3 +181,199 @@ h3 {
   text-align: center;
   color: white;
 }
+
+
+.top {
+    display: flex;
+    background-color: #a0a8b2;
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formHeader {
+    font-size: 65px;
+    font-weight: 100;
+    color: white;
+    /* height: 30%; */
+    /* background-color: black; */
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    margin: 0px;
+    margin-bottom: 5px; 
+}
+
+.box select {
+    padding: 10px;
+    width: 100vw;
+    height: 50px;
+    background-color: #dddddd;
+    /* margin: 10px;
+    margin-right: 45px; */
+    /* border: none; */
+    font-size: 20px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.inputAreas {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+input {
+    padding: 15px;
+    margin: 0px;
+    background-color: #dddddd;
+    border: none;
+    margin-bottom: 5px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.buttonClass {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100vw;
+    padding-bottom: 10px;   
+}
+
+.saveButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+
+.closeButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+
+.saveButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+    margin-bottom: 4%;
+}
+
+.closeButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+} 
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+  #newEntry {
+      position: absolute;
+      width: 370px;
+      height: 400px;
+      background: white;
+      margin-top: 100px;
+      display: flex;
+  }
+  
+  .formEntry {
+      display: flex;
+      background-color: white;
+      border-radius: 4px;
+      height: 400px;
+      width: 400px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+  }
+  
+  .modal {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: 400px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+  }
+  
+  .top {
+      width: 350px;
+      height: 75px;
+      background-color: white;
+  }
+  
+  .formHeader {
+      color: black;
+      font-size: 50px;
+  }
+  
+  .box select {
+      background-color: white;
+      border: 1px solid #dddddd;
+      font-size: 15px;
+  }
+  
+  input {
+      background-color: white;
+      border: 1px solid #dddddd;
+  }
+  
+  .inputAreas {
+      width: 300px;
+      padding: 0;
+  }
+  
+  .buttonClass {
+      width: 300px;
+  }
+  
+  .saveButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  }
+  
+  .closeButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  } 
+  
+  }
+  
