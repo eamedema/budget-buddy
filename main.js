@@ -25,25 +25,37 @@ $(()=>{
     name = $('.nameInput').val()
     amount = $('.amountSpent').val()
 
-    console.log(type);
-    console.log(date);
-    console.log(name);
-    console.log(amount);
+    // console.log(type);
+    // console.log(date);
+    // console.log(name);
+    // console.log(amount);
 
     $('#listItems').append(`<div class="listItem ${type}">
     <p class="entry date" id="left">${date}</p>
     <p class="entry name" id="left">${name}</p>
-    <p class="entry price">$${amount}</p>
+    <p class="entry price">$ <em class="numberTotal">${amount}</em></p>
     </div>`);
 
     total -= amount;
-    $('.total').removeClass(`total`);
-    $('.total').append(`<h1>$${total}</h1>`);
+    //$('.total').removeClass(`total`);
+    $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`);
+
+    if (total > 0) {
+      $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`);
+    } else if (total <= 0) {
+      alert("Your out of money");
+    }
   };
 
+  //let numberTotal = $('.numberTotal').html();
+  //$('.total') =-
+  // let totals = $( ":nth-child(3)" ).nextAll( ".price" ).val();
+  // console.log(totals);
 
+  // let numberTotal = $('.numberTotal').val()
+  // console.log(numberTotal)
 
-
+  document.querySelector("#today").valueAsDate = new Date();
 
   // let $btns = $('.btn').click(function() {
   //   if (this.id == 'all') {

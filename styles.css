@@ -10,12 +10,11 @@ body, html {
   border: none;
   height: 100vh;
   font-family: 'Lato', sans-serif;
-  
 }
 #entries-container {
   overflow: scroll;
   display: flex;
-  padding-top: 22vh;
+  padding-top: 23vh;
   padding-bottom: 5vh;
 }
 #header-container {
@@ -79,7 +78,7 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column-reverse;
- 
+  width: 100vh;
   padding:  0;
   margin: 0;
   
@@ -95,14 +94,14 @@ h3 {
   border: 1px solid blue;
 }
 .date {
-  flex: 1;
-}
-.name {
   flex: 3;
 }
+.name {
+  flex: 6;
+}
 .price {
-  flex: 1;
-  margin-right: 0;
+  flex: 2;
+  /* margin: auto 0; */
 }
 .food {
   background-color: pink;
