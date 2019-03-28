@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -7,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="shortcut icon" href="imgs/teal-star-favicon.ico" />    
-    
-  </head> 
+    <link rel="shortcut icon" href="imgs/teal-star-favicon.ico" />
+
+  </head>
   <body>
 <div id="header-container">
 
@@ -20,11 +19,11 @@
   </div>
 
   <div class="filters">
-    <button class="active btn" id="all">Show All</button>
-    <button class="btn" id="a">Show A</button>
-    <button class="btn" id="b">Show B</button>
-    <button class="btn" id="c">Show C</button>
-    <button class="btn" id="d">Show D</button>
+    <button class="active btn" id="all">SHOW ALL</button>
+    <button class="btn" id="food">FOOD</button>
+    <button class="btn" id="bills">BILLS</button>
+    <button class="btn" id="clothing">CLOTHING</button>
+    <button class="btn" id="entertain">ENTERTAIN</button>
   </div>
 
   <div class="titles">
@@ -82,8 +81,8 @@
           <p class="entry date" id="left">01/24/19</p>
           <p class="entry name" id="left">TJ Maxxxxxxx</p>
           <p class="entry price">$400</p>
-        </div>   
-        <div class="listItem food">
+        </div>
+        <!-- <div class="listItem food">
             <p class="entry date" id="left">12/30/18</p>
             <p class="entry name" id="left">Bought Doughnuts</p>
             <p class="entry price">$500</p>
@@ -92,8 +91,8 @@
             <p class="entry date" id="left">01/20/19</p>
             <p class="entry name" id="left">Dentist</p>
             <p class="entry price">$200</p>
-          </div>
-          <div class="listItem clothing">
+          </div> -->
+          <!-- <div class="listItem clothing">
             <p class="entry date" id="left">01/24/19</p>
             <p class="entry name" id="left">TJ Maxxxxxxx</p>
             <p class="entry price">$400</p>
@@ -127,8 +126,8 @@
                 <p class="entry date" id="left">01/24/19</p>
                 <p class="entry name" id="left">TJ Maxxxxxxx</p>
                 <p class="entry price">$400</p>
-              </div>
-              <div class="listItem food">
+              </div> -->
+              <!-- <div class="listItem food">
                   <p class="entry date" id="left">12/30/18</p>
                   <p class="entry name" id="left">Bought Doughnuts</p>
                   <p class="entry price">$500</p>
@@ -187,7 +186,7 @@
                         <p class="entry date" id="left">01/24/19</p>
                         <p class="entry name" id="left">OUTLET MALL</p>
                         <p class="entry price">$400</p>
-                      </div>               
+                      </div>
                       <div class="listItem food" id="parent">
                           <p class="entry date" id="left">12/30/18</p>
                           <p class="entry name" id="left">PIZZZZAAA</p>
@@ -202,11 +201,11 @@
                           <p class="entry date" id="left">01/24/19</p>
                           <p class="entry name" id="left">LAST LIST ITEM</p>
                           <p class="entry price">$400</p>
-                        </div>
+                        </div> -->
   </div>
 </div>
 <!-- <div class="spacer"></div> -->
-<!-- 
+<!--
 <div id="parent">
   <div class="box a b">A &amp; B</div>
   <div class="box a">A</div>
@@ -220,11 +219,11 @@
       </div>
 </div>
 
-<div id="newEntry" class="formEntry hide show">
+<div id="newEntry" class="entry hide show">
     <div class="modal">
 
     <div class="top">
-    <h3 class="formHeader">New Entry</h3>
+    <h2>New Entry</h2>
     </div>
 
       <div class="inputAreas">
@@ -237,7 +236,7 @@
             <option value="bills">Bills</option>
           </select>
         </div>
-        
+
         <input class="dateOfEntry" type="date" id="date">
         <input class="nameInput" type="text" id="nameOfItem" placeholder="What Did You Buy?">
         <input class="amountSpent" type="number" min="0.01" step="0.01" placeholder="$0.00">
