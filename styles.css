@@ -1,28 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 * {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
 }
-
 body, html {
   margin: 0;
   padding: 0;
   border: none;
   height: 100vh;
   font-family: 'Lato', sans-serif;
-  
 
 }
 #entries-container {
   overflow: scroll;
   display: flex;
-  padding-top: 22vh;
+  padding-top: 23vh;
   padding-bottom: 5vh;
 }
 #header-container {
   position: fixed;
 }
-
 .header {
   display: flex;
   justify-content: center;
@@ -33,14 +31,15 @@ body, html {
   padding: 10px;
   background-color: black;
 }
-
-
-
 div {
   text-align: right;
 }
 #left {
   text-align: left;
+}
+
+#right {
+  text-align: right;
 }
 
 .filters{
@@ -54,73 +53,67 @@ div {
   /* align-items: center; */
   flex-wrap: wrap;
 }
-
 .titles{
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 7vh;
   display: flex;
-  /* justify-content: start; */
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  flex-direction: row;
+  /* padding: 20px; */
   background-color: black;
   text-transform: uppercase;
-  text-align: right;
+  /* text-align: right; */
   letter-spacing: 3px;
   color: white;
-
 }
 h3 {
   /* margin: 20px; */
-  text-align: left;
-}
+  /* text-align: left; */
+  flex: 1;
 
+}
 #listItems {
-  /* display: flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column; */
-  border: 3px solid red;
+  flex-direction: column-reverse;
   width: 100vh;
   padding:  0;
   margin: 0;
 }
-
 .listItem {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100vw;
 }
 .entry {
   padding: 10px;
   border: 1px solid blue;
 }
 .date {
-  flex: 1;
-}
-.name {
   flex: 3;
 }
+.name {
+  flex: 6;
+}
 .price {
-  flex: 1;
+  flex: 2;
   /* margin: auto 0; */
 }
-
 .food {
   background-color: pink;
 }
-
 .bills {
   background-color: lightgreen;
 }
-
 .clothing {
   background-color: lightblue;
 }
-
 #new {
   position: fixed;
-
   bottom: 0;
   height: 7vh;
   width: 100%;
@@ -131,6 +124,19 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+#newEntry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 600px;
+    background: white;
+    z-index: 200;
+    height: 100vh;
+}
+
 .enterTotal {
   text-align: center;
   background-color: white;
@@ -142,8 +148,6 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
 }
-
-
 .btn {
   border: none;
   background: linear-gradient(to bottom, #3498db, #2980b9);
@@ -154,12 +158,11 @@ h3 {
   text-decoration: none;
   margin: 5px;
 }
-
 .active {
   background: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-.box {
+/* .filterbox {
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   padding: 10px;
   height: 100px;
@@ -169,13 +172,190 @@ h3 {
   text-align: center;
   border-radius: 3px;
   color: teal;
-}
+} */
 .spacer {
   clear: both;
   height: 20px;
 }
-
 .totalRemaining {
   text-align: center;
   color: white;
 }
+.top {
+    display: flex;
+    background-color: #a0a8b2;
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+.formHeader {
+    font-size: 65px;
+    font-weight: 100;
+    color: white;
+    /* height: 30%; */
+    /* background-color: black; */
+    margin: 0;
+}
+.box {
+    display: flex;
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.box select {
+    padding: 10px;
+    width: 100vw;
+    height: 50px;
+    background-color: #dddddd;
+    /* margin: 10px;
+    margin-right: 45px; */
+    /* border: none; */
+    font-size: 20px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+.inputAreas {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 5px;
+}
+input {
+    padding: 15px;
+    margin: 0px;
+    background-color: #dddddd;
+    border: none;
+    margin-bottom: 5px;
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
+}
+a {
+    text-decoration: none;
+    list-style: none;
+}
+.buttonClass {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100vw;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.saveButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+.closeButton:hover {
+    background-color: black;
+    color: #dddddd;
+}
+.saveButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+    margin-bottom: 4%;
+}
+.closeButton {
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 25px 30px;
+    background-color: #a0a8b2;
+    width: 80%;
+}
+@media only screen and (min-width: 768px) {
+  #newEntry {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 600px;
+      background: white;
+  }
+
+  .formEntry {
+      display: flex;
+      background-color: white;
+      border-radius: 4px;
+      height: 400px;
+      width: 400px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
+  }
+
+  .modal {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      height: 550px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+  }
+
+  .top {
+      width: 350px;
+      height: 75px;
+      background-color: white;
+  }
+
+  .formHeader {
+      color: black;
+      font-size: 50px;
+  }
+
+  .box select {
+      background-color: white;
+      border: 1px solid #dddddd;
+      font-size: 15px;
+  }
+
+  input {
+      background-color: white;
+      border: 1px solid #dddddd;
+      height: 60px;
+  }
+
+  .inputAreas {
+      width: 400px;
+      padding: 0;
+      margin: 0;
+      height: 300px;
+  }
+
+  .buttonClass {
+      width: 400px;
+  }
+
+  .saveButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  }
+
+  .closeButton {
+      border-radius: 2px;
+      padding: 8px 30px;
+      width: 100%;
+      margin-bottom: 2%;
+  }
+
+  }
