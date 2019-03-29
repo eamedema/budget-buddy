@@ -4,6 +4,7 @@ $(()=>{
   $('.seeTotal').hide()
   $('.totalSpent').hide()
   $('.amountSpent').addClass('blue')
+  $('.typeTotal').hide()
 
  //initializing variables
  let total;
@@ -19,7 +20,13 @@ $(()=>{
  let clothingTotal = 0;
  let entertainmentTotal = 0;
 
+ let foodTotalPercent = 0;
+ let billsTotalPercent = 0;
+ let entertainmentTotalPercent = 0;
+ let clothingTotalPercent = 0;
+
  // filling the totals
+
  $('.amountSpent').append(`<h2 class="totalsTest">TOTAL SPENT = $${amountSpent}</h2>`);
  $('.foodTotal').append(`<h2 class="totalsTest">FOOD = $${foodTotal}</h2>`);
  $('.billsTotal').append(`<h2 class="totalsTest">BILLS = $${billsTotal}</h2>`);
@@ -99,7 +106,6 @@ $(()=>{
      </div>`);
 
      total -= amount;
-     console.log(total);
      //$('.total').removeClass(`total`);
      $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`)
 
@@ -117,6 +123,7 @@ $(()=>{
 
      //totals editing
      amountSpent += parseInt(amount);
+     console.log(amountSpent)
      $('.amountSpent').html(`<h2 class="totalsTest">TOTAL SPENT = $${amountSpent}</h2>`)
 
      if (type ==="food") {
@@ -135,6 +142,10 @@ $(()=>{
        clothingTotal += parseInt(amount);
        $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = $${clothingTotal}</h2>`)
      }
+
+     $('.totalUsed').css("flex", `${amountSpent}`);
+     $('.totalLeft').css("flex", `${total}`);
+
 
      $('#newEntry').hide()
    }
@@ -235,6 +246,7 @@ $(()=>{
   function showTotals(){
     $('.seeTotals').hide()
     $('.totalSpent').show()
+    $('.typeTotal').show()
   }
 
   //minimize totals bottom bar
@@ -242,7 +254,40 @@ $(()=>{
 
   function minimizeTotals(){
     $('.totalSpent').hide()
+    $('.typeTotal').hide()
     $('.seeTotals').show()
+  }
+
+  $('.dollars').on('click', changeDollars);
+
+  function changeDollars(){
+    $('.foodTotal').html(`<h2 class="totalsTest">FOOD = $${foodTotal}</h2>`)
+    $('.billsTotal').html(`<h2 class="totalsTest">BILLS = $${billsTotal}</h2>`)
+    $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = $${entertainmentTotal}</h2>`)
+    $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = $${clothingTotal}</h2>`)
+    $('.dollars').addClass('blue')
+    $('.percent').removeClass('blue')
+    console.log(billsTotal)
+    console.log(amountSpent)
+    console.log((billsTotal/amountSpent)*100)
+  }
+
+  $('.percent').on('click', changePercent);
+
+  foodTotalPercent = parseInt((foodTotal / amountSpent)*100)
+  billsTotalPercent = parseInt((billsTotal/amountSpent)*100)
+  entertainmentTotalPercent = parseInt((entertainmentTotal / amountSpent)*100)
+  clothingTotalPercent = parseInt((clothingTotal / amountSpent)*100)
+
+  function changePercent(){
+    $('.foodTotal').html(`<h2 class="totalsTest">FOOD = ${foodTotalPercent}%</h2>`)
+    $('.billsTotal').html(`<h2 class="totalsTest">BILLS = ${billsTotalPercent}%</h2>`)
+    $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = ${entertainmentTotalPercent}%</h2>`)
+    $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = ${clothingTotalPercent}%</h2>`)
+    $('.dollars').removeClass('blue')
+    $('.percent').addClass('blue')
+    console.log(billsTotalPercent)
+    console.log(amountSpent)
   }
 
 
