@@ -420,4 +420,51 @@ a {
 
   }
 
+  .seeTotals {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 8.5vh;
+    margin-right: 3vw;
+    right: 0;
+    cursor: default;
+  }
+
+  .plusButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
+    transition: 1s;
+  }
+
+  .seeTotal {
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
+    transition: 1s;
+  }
+
+  .minimize {
+    color: #3498db;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: default;
+  }
+  .blue{
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: white;
+    font-weight: 700;
+  }
+
   }

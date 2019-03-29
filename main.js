@@ -1,6 +1,9 @@
 $(()=>{
 
   $('#newEntry').hide()
+  $('.seeTotal').hide()
+  $('.totalSpent').hide()
+  $('.amountSpent').addClass('blue')
 
  //initializing variables
  let total;
@@ -138,6 +141,111 @@ $(()=>{
  };
 
  document.querySelector("#today").valueAsDate = new Date();
+
+ $('#all').on('click', ()=>{
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.amountSpent').addClass('blue')
+    $('.entertainmentTotal').removeClass('blue')
+    $('.foodTotal').removeClass('blue')
+    $('.billsTotal').removeClass('blue')
+    $('.clothingTotal').removeClass('blue')
+  });
+
+  $('#food').on('click', ()=>{
+    $('.seeTotals').hide()
+    $('.totalSpent').show()
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.clothing').hide()
+    $('.entertain').hide()
+    $('.foodTotal').addClass('blue')
+    $('.billsTotal').removeClass('blue')
+    $('.entertainmentTotal').removeClass('blue')
+    $('.clothingTotal').removeClass('blue')
+  });
+
+  $('#bills').on('click', ()=>{
+    $('.seeTotals').hide()
+    $('.totalSpent').show()
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.food').hide()
+    $('.clothing').hide()
+    $('.entertain').hide()
+    $('.billsTotal').addClass('blue')
+    $('.foodTotal').removeClass('blue')
+    $('.entertainmentTotal').removeClass('blue')
+    $('.clothingTotal').removeClass('blue')
+  });
+
+  $('#clothing').on('click', ()=>{
+    $('.seeTotals').hide()
+    $('.totalSpent').show()
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.food').hide()
+    $('.entertain').hide()
+    $('.clothingTotal').addClass('blue')
+    $('.foodTotal').removeClass('blue')
+    $('.entertainmentTotal').removeClass('blue')
+    $('.billsTotal').removeClass('blue')
+  });
+
+  $('#entertain').on('click', ()=>{
+    $('.seeTotals').hide()
+    $('.totalSpent').show()
+    $('.food').show()
+    $('.bills').show()
+    $('.clothing').show()
+    $('.entertain').show()
+    $('.bills').hide()
+    $('.clothing').hide()
+    $('.food').hide()
+    $('.entertainmentTotal').addClass('blue')
+    $('.foodTotal').removeClass('blue')
+    $('.billsTotal').removeClass('blue')
+    $('.clothingTotal').removeClass('blue')
+
+  });
+
+
+
+  $('.seeTotals').hover( ()=>{
+    $('.plusButton').hide()
+    $('.seeTotal').show()
+  }, ()=>{
+    $('.seeTotal').hide()
+    $('.plusButton').show()
+  });
+
+  //show the totals on click of the see totals button
+  $('.seeTotals').on('click', showTotals);
+
+  function showTotals(){
+    $('.seeTotals').hide()
+    $('.totalSpent').show()
+  }
+
+  //minimize totals bottom bar
+  $('.minimize').on('click', minimizeTotals);
+
+  function minimizeTotals(){
+    $('.totalSpent').hide()
+    $('.seeTotals').show()
+  }
+
+
 
  $('#new').on('click',()=>{
    $('#newEntry').show()
