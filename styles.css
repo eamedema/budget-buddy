@@ -91,7 +91,9 @@ h3 {
 }
 .entry {
   padding: 10px;
-  border: 1px solid blue;
+  border-bottom: 1px solid grey;
+  border-left: .5px solid #f0f0f0;
+  border-right: .5px solid #f0f0f0;
 }
 .date {
   flex: 3;
@@ -103,15 +105,19 @@ h3 {
   flex: 2;
   /* margin: auto 0; */
 }
-.food {
+.food:hover {
   background-color: pink;
 }
-.bills {
+.bills:hover {
   background-color: lightgreen;
 }
-.clothing {
+.clothing:hover {
   background-color: lightblue;
 }
+.entertainment:hover {
+  background-color: lightyellow;
+}
+
 #new {
   position: fixed;
   bottom: 0;
