@@ -64,6 +64,10 @@ div {
   align-items: center;
   padding: 0 10px;
  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
  #listItems {
   display: flex;
   justify-content: flex-start;
@@ -108,6 +112,7 @@ div {
 .entertain {
   background-color: purple;
  }
+<<<<<<< HEAD
 .dateTitle {
   flex: 1;
 
@@ -119,6 +124,20 @@ div {
  totalTitle {
   flex: 3;
 
+=======
+
+.dateTitle {
+  flex: 1;
+ 
+ }
+ .nameTitle {
+  flex: 1;
+ 
+ }
+ totalTitle {
+  flex: 3;
+ 
+>>>>>>> master
  }
 #new {
   position: fixed;
@@ -187,6 +206,7 @@ div {
   text-align: center;
   color: white;
 }
+
 .top {
     display: flex;
     margin: 0;
@@ -202,6 +222,10 @@ h4 {
   width: 100vw;
   text-align: center;
   font-size: 80px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 }
 .formHeader {
     font-size: 65px;
@@ -295,13 +319,32 @@ a {
     background-color: black;
     width: 80%;
 }
+<<<<<<< HEAD
 .closeButton:hover::after {
   opacity: 1;
 }
 .saveButton:hover::after {
   opacity: 1;
 }
+=======
+
+.closeButton:hover::after {
+  opacity: 1;
+}
+
+.saveButton:hover::after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+>>>>>>> master
 @media only screen and (min-width: 768px) {
+
   #newEntry {
       position: absolute;
       top: 50%;
@@ -315,6 +358,7 @@ a {
       border-radius: 3px;
   }
 
+  
   .formEntry {
       display: flex;
       background-color: white;
@@ -323,6 +367,11 @@ a {
       width: 400px;
       align-items: center;
       justify-content: center;
+<<<<<<< HEAD
+=======
+      
+  }
+>>>>>>> master
 
   }
   .modal {
@@ -334,12 +383,20 @@ a {
       align-items: center;
       margin: 0;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   h4 {
     font-size: 75px;
     padding-top: 10%;
     padding: 0;
     margin: 0;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
   .top {
       width: 400px;
       height: 125px;
@@ -366,6 +423,11 @@ a {
       padding: 0;
       margin: 0;
       height: 310px;
+<<<<<<< HEAD
+=======
+      
+  }
+>>>>>>> master
 
   }
   .buttonClass {
@@ -381,6 +443,11 @@ a {
       border-radius: 2px;
       padding: 20px 30px;
       width: 100%;
+<<<<<<< HEAD
+=======
+      
+  }
+>>>>>>> master
 
   }
   }
