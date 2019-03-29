@@ -114,15 +114,15 @@ div {
 
 .dateTitle {
   flex: 1;
- 
+
  }
  .nameTitle {
   flex: 1;
- 
+
  }
  totalTitle {
   flex: 3;
- 
+
  }
 #new {
   position: fixed;
@@ -312,6 +312,24 @@ a {
   opacity: 1;
 }
 
+.totalSpent {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  color: darkgray;
+  bottom: 0;
+  margin-bottom: 7vh;
+  width: 100%
+
+}
+
+.totalsTesting {
+  padding: 5px 10px;
+
+}
 
 
 
@@ -333,7 +351,7 @@ a {
       border-radius: 3px;
   }
 
-  
+
   .formEntry {
       display: flex;
       background-color: white;
@@ -342,7 +360,7 @@ a {
       width: 400px;
       align-items: center;
       justify-content: center;
-      
+
   }
 
   .modal {
@@ -392,7 +410,7 @@ a {
       padding: 0;
       margin: 0;
       height: 310px;
-      
+
   }
 
   .buttonClass {
@@ -410,7 +428,7 @@ a {
       border-radius: 2px;
       padding: 20px 30px;
       width: 100%;
-      
+
   }
 
   }
