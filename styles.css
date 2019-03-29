@@ -10,14 +10,14 @@ body, html {
   border: none;
   height: 100vh;
   font-family: 'Lato', sans-serif;
-
 }
 #entries-container {
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   padding-top: 23vh;
   padding-bottom: 5vh;
-}
+  width: 100vw;
+ }
 #header-container {
   position: fixed;
 }
@@ -37,11 +37,9 @@ div {
 #left {
   text-align: left;
 }
-
 #right {
   text-align: right;
 }
-
 .filters{
   background-color: white;
   color: black;
@@ -55,45 +53,38 @@ div {
 }
 .titles{
   position: fixed;
-  width: 100vw;
   height: 7vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  /* padding: 20px; */
-  background-color: black;
+  width: 100%;
   text-transform: uppercase;
-  /* text-align: right; */
   letter-spacing: 3px;
+  background-color: black;
   color: white;
-}
-h3 {
-  /* margin: 20px; */
-  /* text-align: left; */
-  flex: 1;
-
-}
-#listItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+ }
+ #listItems {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column-reverse;
-  width: 100vh;
-  padding:  0;
+  width: 100vw;
+  padding-bottom: 2vh;
   margin: 0;
-}
-.listItem {
+  overflow: auto;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+ }
+ .listItem {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
-}
+  width: 100%;
+ }
 .entry {
   padding: 10px;
-  border-bottom: 1px solid grey;
-  border-left: .5px solid #f0f0f0;
-  border-right: .5px solid #f0f0f0;
+  border: 1px solid blue;
 }
 .date {
   flex: 3;
@@ -105,19 +96,30 @@ h3 {
   flex: 2;
   /* margin: auto 0; */
 }
-.food:hover {
+.food {
   background-color: pink;
 }
-.bills:hover {
+.bills {
   background-color: lightgreen;
 }
-.clothing:hover {
+.clothing {
   background-color: lightblue;
 }
-.entertainment:hover {
-  background-color: lightyellow;
-}
+.entertain {
+  background-color: purple;
+ }
+.dateTitle {
+  flex: 1;
 
+ }
+ .nameTitle {
+  flex: 1;
+
+ }
+ totalTitle {
+  flex: 3;
+
+ }
 #new {
   position: fixed;
   bottom: 0;
@@ -130,19 +132,17 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-
 #newEntry {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 100vw;
     height: 600px;
     background: white;
     z-index: 200;
     height: 100vh;
 }
-
 .enterTotal {
   text-align: center;
   background-color: white;
@@ -189,12 +189,19 @@ h3 {
 }
 .top {
     display: flex;
-    background-color: #a0a8b2;
     margin: 0;
     width: 100vw;
     height: 20vh;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+}
+h4 {
+  height: 100%;
+  margin: 0;
+  width: 100vw;
+  text-align: center;
+  font-size: 80px;
 }
 .formHeader {
     font-size: 65px;
@@ -215,12 +222,12 @@ h3 {
 .box select {
     padding: 10px;
     width: 100vw;
-    height: 50px;
+    height: 60px;
     background-color: #dddddd;
     /* margin: 10px;
     margin-right: 45px; */
     /* border: none; */
-    font-size: 20px;
+    font-size: 25px;
     /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
 }
 .modal {
@@ -230,21 +237,24 @@ h3 {
     height: 100vh;
     width: 100vw;
     text-align: center;
+    overflow: hidden;
 }
 .inputAreas {
     display: flex;
     flex-direction: column;
-    font-size: 28px;
-    width: 100vw;
-    justify-content: space-between;
+    font-size: 30px;
+    width: 80vw;
+    justify-content: space-around;
     padding: 5px;
+    height: 400px;
 }
 input {
-    padding: 15px;
+    padding: 10px;
     margin: 0px;
     background-color: #dddddd;
     border: none;
     margin-bottom: 5px;
+    height: 60px;
     /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
 }
 a {
@@ -260,29 +270,36 @@ a {
     text-align: center;
 }
 .saveButton:hover {
-    background-color: black;
-    color: #dddddd;
+    background-color: #373738;
+    transform: scale(1.2, 1.2);
+    padding-top: 35px;
 }
 .closeButton:hover {
-    background-color: black;
-    color: #dddddd;
+    background-color: #373738;
+    transform: scale(1.2, 1.2);
 }
 .saveButton {
     text-decoration: none;
     color: white;
     border-radius: 2px;
-    padding: 25px 30px;
-    background-color: #a0a8b2;
+    padding: 40px 50px;
+    background-color: black;
     width: 80%;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
 }
 .closeButton {
     text-decoration: none;
     color: white;
     border-radius: 2px;
-    padding: 25px 30px;
-    background-color: #a0a8b2;
+    padding: 40px 50px;
+    background-color: black;
     width: 80%;
+}
+.closeButton:hover::after {
+  opacity: 1;
+}
+.saveButton:hover::after {
+  opacity: 1;
 }
 @media only screen and (min-width: 768px) {
   #newEntry {
@@ -293,6 +310,9 @@ a {
       width: 500px;
       height: 600px;
       background: white;
+      border: none;
+      box-shadow: 0px 0px 31px 1px rgba(0,0,0,1);
+      border-radius: 3px;
   }
 
   .formEntry {
@@ -303,65 +323,64 @@ a {
       width: 400px;
       align-items: center;
       justify-content: center;
-      box-shadow: 0px 0px 31px 1px rgba(0,0,0,0.3);
-  }
 
+  }
   .modal {
       display: flex;
       flex-direction: column;
-      width: 500px;
-      height: 550px;
+      width: 480px;
+      height: 580px;
       justify-content: space-between;
       align-items: center;
       margin: 0;
   }
-
-  .top {
-      width: 350px;
-      height: 75px;
-      background-color: white;
+  h4 {
+    font-size: 75px;
+    padding-top: 10%;
+    padding: 0;
+    margin: 0;
   }
-
+  .top {
+      width: 400px;
+      height: 125px;
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+  }
   .formHeader {
       color: black;
       font-size: 50px;
   }
-
   .box select {
       background-color: white;
       border: 1px solid #dddddd;
       font-size: 15px;
   }
-
   input {
       background-color: white;
       border: 1px solid #dddddd;
       height: 60px;
   }
-
   .inputAreas {
       width: 400px;
       padding: 0;
       margin: 0;
-      height: 300px;
-  }
+      height: 310px;
 
+  }
   .buttonClass {
       width: 400px;
   }
-
   .saveButton {
       border-radius: 2px;
-      padding: 8px 30px;
+      padding: 20px 30px;
       width: 100%;
       margin-bottom: 2%;
   }
-
   .closeButton {
       border-radius: 2px;
-      padding: 8px 30px;
+      padding: 20px 30px;
       width: 100%;
-      margin-bottom: 2%;
-  }
 
+  }
   }
