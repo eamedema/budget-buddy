@@ -128,24 +128,30 @@ $(()=>{
 
      if (type ==="food") {
        foodTotal += parseInt(amount);
-       $('.foodTotal').html(`<h2 class="totalsTest">FOOD = $${foodTotal}</h2>`)
+       // $('.foodTotal').html(`<h2 class="totalsTest">FOOD = $${foodTotal}</h2>`)
      }
      if (type === "bills") {
        billsTotal += parseInt(amount);
-       $('.billsTotal').html(`<h2 class="totalsTest">BILLS = $${billsTotal}</h2>`)
+       // $('.billsTotal').html(`<h2 class="totalsTest">BILLS = $${billsTotal}</h2>`)
      }
      if (type === "entertainment") {
        entertainmentTotal += parseInt(amount);
-       $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = $${entertainmentTotal}</h2>`)
+       // $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = $${entertainmentTotal}</h2>`)
      }
      if (type === "clothing") {
        clothingTotal += parseInt(amount);
-       $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = $${clothingTotal}</h2>`)
+       // $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = $${clothingTotal}</h2>`)
      }
 
      $('.totalUsed').css("flex", `${amountSpent}`);
      $('.totalLeft').css("flex", `${total}`);
 
+     $('.foodTotal').html(`<h2 class="totalsTest">FOOD = $${foodTotal}</h2>`)
+     $('.billsTotal').html(`<h2 class="totalsTest">BILLS = $${billsTotal}</h2>`)
+     $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = $${entertainmentTotal}</h2>`)
+     $('.clothingTotal').html(`<h2 class="totalsTest">CLOTHING = $${clothingTotal}</h2>`)
+     $('.dollars').addClass('blue')
+     $('.percent').removeClass('blue')
 
      $('#newEntry').hide()
    }
@@ -274,12 +280,37 @@ $(()=>{
 
   $('.percent').on('click', changePercent);
 
-  foodTotalPercent = parseInt((foodTotal / amountSpent)*100)
-  billsTotalPercent = parseInt((billsTotal/amountSpent)*100)
-  entertainmentTotalPercent = parseInt((entertainmentTotal / amountSpent)*100)
-  clothingTotalPercent = parseInt((clothingTotal / amountSpent)*100)
+  // $('.typeTotal').on('click', ()=>{
+  //   if (foodTotal > 0){
+  //     foodTotalPercent = (foodTotal / amountSpent)*100
+  //   }
+  //
+  //   if (billsTotal > 0){
+  //     billsTotalPercent = (billsTotal/amountSpent)*100
+  //   }
+  //   if (entertainmentTotal > 0){
+  //     entertainmentTotalPercent = (entertainmentTotal / amountSpent)*100
+  //   }
+  //   if (clothingTotal > 0){
+  //     clothingTotalPercent = (clothingTotal / amountSpent)*100
+  //   }
+  // });
+
 
   function changePercent(){
+    if (foodTotal > 0){
+      foodTotalPercent = (foodTotal / amountSpent)*100
+    }
+    if (billsTotal > 0){
+      billsTotalPercent = (billsTotal/amountSpent)*100
+    }
+    if (entertainmentTotal > 0){
+      entertainmentTotalPercent = (entertainmentTotal / amountSpent)*100
+    }
+    if (clothingTotal > 0){
+      clothingTotalPercent = (clothingTotal / amountSpent)*100
+    }
+
     $('.foodTotal').html(`<h2 class="totalsTest">FOOD = ${foodTotalPercent}%</h2>`)
     $('.billsTotal').html(`<h2 class="totalsTest">BILLS = ${billsTotalPercent}%</h2>`)
     $('.entertainmentTotal').html(`<h2 class="totalsTest">ENTERTAINMENT = ${entertainmentTotalPercent}%</h2>`)
@@ -299,9 +330,6 @@ $(()=>{
  $('#buttonId').on('click', ()=>{
    $('#newEntry').hide()
  });
- // $('#buttonId').on('click', ()=>{
- //   $('#newEntry').hide()
- // });
 
 
 });

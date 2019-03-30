@@ -195,7 +195,7 @@ div {
     width: 100vw;
     height: 600px;
     background: white;
-    z-index: 200;
+    z-index: 205;
     height: 100vh;
 }
 .enterTotal {
@@ -364,9 +364,9 @@ a {
 .totalSpent {
   position: fixed;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: lightgray;
   color: darkgray;
   bottom: 0;
@@ -378,6 +378,105 @@ a {
 .totalsTesting {
   padding: 5px 10px;
 
+}
+
+.seeTotals {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 8.5vh;
+  margin-right: 3vw;
+  right: 0;
+  cursor: default;
+}
+
+.plusButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
+  transition: 1s;
+}
+
+.seeTotal {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
+  transition: 1s;
+}
+
+.minimize {
+  color: #3498db;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: default;
+}
+
+.blue{
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  color: white;
+  font-weight: 700;
+}
+
+.typeTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 25vh;
+  margin-right: 1vw;
+  background-color: darkgray;
+  color: black;
+  padding: 10px 5px 10px 5px;
+  z-index: 200;
+}
+
+.types{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px 5px 15px;
+}
+
+.statusBar {
+  position: fixed;
+  top: 0;
+  height: 7px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  z-index: 2000;
+}
+
+.totalLeft {
+  flex:1;
+  background-color: lightgray;
+  height: 100%;
+  transition: 1s;
+}
+
+.totalUsed {
+
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  height: 100%;
+  transition: 1s;
 }
 
 
@@ -470,6 +569,20 @@ a {
       border-radius: 2px;
       padding: 20px 30px;
       width: 100%;
+
+  }
+
+  .totalSpent {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    color: darkgray;
+    bottom: 0;
+    margin-bottom: 7.5vh;
+    width: 100%
 
   }
 
