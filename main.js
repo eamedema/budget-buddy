@@ -181,6 +181,7 @@ $(()=>{
      $('.dollars').addClass('blue')
      $('.percent').removeClass('blue')
 
+     $('#newEntry').hide()
 
    }
  };
@@ -355,9 +356,9 @@ $(()=>{
    $('#newEntry').show()
  });
 
- $('.saveButton').on('click', ()=>{
-   $('#newEntry').hide()
- });
+ // $('.saveButton').on('click', ()=>{
+ //   $('#newEntry').hide()
+ // });
 
  $('.closeButton').on('click', ()=>{
   $('#newEntry').hide()
