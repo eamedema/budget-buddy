@@ -52,10 +52,7 @@ $(()=>{
    name = $('.nameInput').val()
    amount = parseInt($('#asdf').val())
 
-   // console.log(type);
-   // console.log(date);
-   // console.log(name);
-   // console.log(amount);
+
 
    if (total > 0) {
      $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`);
@@ -93,38 +90,7 @@ $(()=>{
        return;
      };
 
-     // if (date === "") {
-     //   let txt;
-     //   let confirmed = confirm('You need to enter the date');
-     //   if (confirmed) {
-     //     txt('You have confirmed');
-     //   } else {
-     //    txt('You did not confirm.');
-     //   }
-     //   document.getElementById("newEntry").innerHTML = txt;
-     // };
-     //
-     // if (name === "") {
-     //   let txt;
-     //   let confirmed = confirm('You need to name your transaction');
-     //   if (confirmed) {
-     //     txt('You have confirmed');
-     //   } else {
-     //    txt('You did not confirm.');
-     //   }
-     //   document.getElementById("newEntry").innerHTML = txt;
-     // };
-     // let input = document.getElementById('asdf');
-     //
-     // if (input.value.length == 0) {
-     //   confirm('You need to enter a transaction amount');
-     // }
 
-
-     // console.log(type);
-     // console.log(date);
-     // console.log(name);
-     // console.log(amount);
 
 
      $('#listItems').append(`<div class="listItem ${type}">
@@ -309,21 +275,7 @@ $(()=>{
 
   $('.percent').on('click', changePercent);
 
-  // $('.typeTotal').on('click', ()=>{
-  //   if (foodTotal > 0){
-  //     foodTotalPercent = (foodTotal / amountSpent)*100
-  //   }
-  //
-  //   if (billsTotal > 0){
-  //     billsTotalPercent = (billsTotal/amountSpent)*100
-  //   }
-  //   if (entertainmentTotal > 0){
-  //     entertainmentTotalPercent = (entertainmentTotal / amountSpent)*100
-  //   }
-  //   if (clothingTotal > 0){
-  //     clothingTotalPercent = (clothingTotal / amountSpent)*100
-  //   }
-  // });
+
 
 
   function changePercent(){
@@ -356,9 +308,6 @@ $(()=>{
    $('#newEntry').show()
  });
 
- // $('.saveButton').on('click', ()=>{
- //   $('#newEntry').hide()
- // });
 
  $('.closeButton').on('click', ()=>{
   $('#newEntry').hide()
