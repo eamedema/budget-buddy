@@ -299,16 +299,16 @@ $(()=>{
 
   function changePercent(){
     if (foodTotal > 0){
-      foodTotalPercent = (foodTotal / amountSpent)*100
+      foodTotalPercent = Math.floor((foodTotal / amountSpent)*100)
     }
     if (billsTotal > 0){
-      billsTotalPercent = (billsTotal/amountSpent)*100
+      billsTotalPercent = Math.floor((billsTotal/amountSpent)*100)
     }
     if (entertainmentTotal > 0){
-      entertainmentTotalPercent = (entertainmentTotal / amountSpent)*100
+      entertainmentTotalPercent = Math.floor((entertainmentTotal / amountSpent)*100)
     }
     if (clothingTotal > 0){
-      clothingTotalPercent = (clothingTotal / amountSpent)*100
+      clothingTotalPercent = Math.floor((clothingTotal / amountSpent)*100)
     }
 
     $('.foodTotal').html(`<h2 class="totalsTest">FOOD = ${foodTotalPercent}%</h2>`)
