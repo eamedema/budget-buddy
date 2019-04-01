@@ -93,6 +93,34 @@ $(()=>{
        return;
      };
 
+     // if (date === "") {
+     //   let txt;
+     //   let confirmed = confirm('You need to enter the date');
+     //   if (confirmed) {
+     //     txt('You have confirmed');
+     //   } else {
+     //    txt('You did not confirm.');
+     //   }
+     //   document.getElementById("newEntry").innerHTML = txt;
+     // };
+     //
+     // if (name === "") {
+     //   let txt;
+     //   let confirmed = confirm('You need to name your transaction');
+     //   if (confirmed) {
+     //     txt('You have confirmed');
+     //   } else {
+     //    txt('You did not confirm.');
+     //   }
+     //   document.getElementById("newEntry").innerHTML = txt;
+     // };
+     // let input = document.getElementById('asdf');
+     //
+     // if (input.value.length == 0) {
+     //   confirm('You need to enter a transaction amount');
+     // }
+
+
      // console.log(type);
      // console.log(date);
      // console.log(name);
@@ -109,10 +137,10 @@ $(()=>{
      //$('.total').removeClass(`total`);
      $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`)
 
-     if (total > 0) {
+     if (total >= 0) {
        $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`)
      }
-     else if (total <= 0) {
+     else if (total < 0) {
        total += parseInt(amount);
        $('.total').html(`<h1 class="totalRemaining">$${total}</h1>`)
        alert("You do not have enough money for this transaction");
@@ -153,7 +181,7 @@ $(()=>{
      $('.dollars').addClass('blue')
      $('.percent').removeClass('blue')
 
-     $('#newEntry').hide()
+
    }
  };
 
@@ -323,13 +351,16 @@ $(()=>{
 
 
 
- $('#new').on('click',()=>{
+  $('#new').on('click',()=>{
    $('#newEntry').show()
  });
 
- $('#buttonId').on('click', ()=>{
+ $('.saveButton').on('click', ()=>{
    $('#newEntry').hide()
  });
 
+ $('.closeButton').on('click', ()=>{
+  $('#newEntry').hide()
+ });
 
 });

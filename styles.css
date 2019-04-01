@@ -129,7 +129,7 @@ div {
       background-size: 200% 100%;
       background-position: 100%;
 }
-.entertain {
+.entertainment {
   transition: 1.5s;
   background-image: linear-gradient(
       to right,
@@ -152,7 +152,7 @@ div {
   transition: .2s;
   background-position: 0%;
 }
-.entertain:hover {
+.entertainment:hover {
   transition: .2s;
   background-position: 0%;
 }
@@ -362,18 +362,21 @@ a {
 }
 
 .totalSpent {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: lightgray;
-  color: darkgray;
-  bottom: 0;
-  margin-bottom: 7.5vh;
-  width: 100%
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: lightgray;
+   color: darkgray;
+   bottom: 0;
+   margin-bottom: 7.5vh;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 12px;
 
-}
+ }
 
 .totalsTesting {
   padding: 5px 10px;
@@ -403,16 +406,19 @@ a {
 }
 
 .seeTotal {
-  width: 150px;
-  height: 50px;
-  border-radius: 25px;
-  background: linear-gradient(to bottom, #3498db, #2980b9);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
-  transition: 1s;
+ width: 150px;
+ height: 50px;
+ border-radius: 25px;
+ background: linear-gradient(to bottom, #3498db, #2980b9);
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ box-shadow: 2px 5px 21px -1px rgba(0,0,0,0.5);
+ transition: 1s;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 12px;
 }
 
 .minimize {
@@ -429,19 +435,19 @@ a {
 }
 
 .typeTotal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin-bottom: 25vh;
-  margin-right: 1vw;
-  background-color: darkgray;
-  color: black;
-  padding: 10px 5px 10px 5px;
-  z-index: 200;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ position: fixed;
+ right: 0;
+ bottom: 0;
+ margin-bottom: 14vh;
+ /* margin-right: 1vw; */
+ background-color: darkgray;
+ color: black;
+ padding: 10px 5px 10px 5px;
+ z-index: 200;
 }
 
 .types{
@@ -573,18 +579,20 @@ a {
   }
 
   .totalSpent {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: lightgray;
-    color: darkgray;
-    bottom: 0;
-    margin-bottom: 7.5vh;
-    width: 100%
-
-  }
+   position: fixed;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   background-color: lightgray;
+   color: darkgray;
+   bottom: 0;
+   margin-bottom: 7.5vh;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 12px;
+ }
 
   .seeTotals {
     position: fixed;
@@ -634,19 +642,19 @@ a {
   }
 
   .typeTotal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    margin-bottom: 17vh;
-    margin-right: 1vw;
-    background-color: lightgray;
-    color: darkgray;
-    padding: 20px 5px 5px 5px;
-  }
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   /* position: fixed; */
+   right: 0;
+   /* bottom: 0;
+   margin-bottom: 16vh; */
+   /* margin-right: 1vw; */
+   background-color: lightgray;
+   color: darkgray;
+   padding: 5px 5px 5px 5px;
+ }
 
   .types{
     display: flex;
