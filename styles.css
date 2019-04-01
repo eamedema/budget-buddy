@@ -103,8 +103,8 @@ div {
   transition: 1.5s;
   background-image: linear-gradient(
       to right,
-      pink,
-      pink 50%,
+      #e260ae,
+      #e260ae 50%,
       transparent 50%);
       background-size: 200% 100%;
       background-position: 100%;
@@ -113,8 +113,8 @@ div {
   transition: 1.5s;
   background-image: linear-gradient(
       to right,
-      lightgreen,
-      lightgreen 50%,
+      #60e294,
+      #60e294 50%,
       transparent 50%);
       background-size: 200% 100%;
       background-position: 100%;
@@ -123,8 +123,8 @@ div {
   transition: 1.5s;
   background-image: linear-gradient(
       to right,
-      lightblue,
-      lightblue 50%,
+      #60aee2,
+      #60aee2 50%,
       transparent 50%);
       background-size: 200% 100%;
       background-position: 100%;
@@ -133,27 +133,27 @@ div {
   transition: 1.5s;
   background-image: linear-gradient(
       to right,
-      lightyellow,
-      lightyellow 50%,
+      #e29460,
+      #e29460 50%,
       transparent 50%);
       background-size: 200% 100%;
       background-position: 100%;
 }
 
 .food:hover {
-  transition: .3s;
+  transition: .2s;
   background-position: 0%;
 }
 .bills:hover {
-  transition: .3s;
+  transition: .2s;
   background-position: 0%;
 }
 .clothing:hover {
-  transition: .3s;
+  transition: .2s;
   background-position: 0%;
 }
 .entertain:hover {
-  transition: .3s;
+  transition: .2s;
   background-position: 0%;
 }
 
