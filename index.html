@@ -12,6 +12,11 @@
   <body>
 <div id="header-container">
 
+  <div class="statusBar">
+    <div class="totalUsed"></div>
+    <div class="totalLeft"></div>
+  </div>
+  
   <div class="header">
     <div class="total">
     <a class="enterTotal">ENTER BUDGET</a>
@@ -23,13 +28,13 @@
     <button class="btn" id="food">FOOD</button>
     <button class="btn" id="bills">BILLS</button>
     <button class="btn" id="clothing">CLOTHING</button>
-    <button class="btn" id="entertain">ENTERTAIN</button>
+    <button class="btn" id="entertain">ENTERTAINMENT</button>
   </div>
 
   <div class="titles">
-      <h3>date</h3>
-      <h3>name</h3>
-      <h3>total</h3>
+      <h3 class ="dateTitle" id="left">date</h3>
+      <h3 class ="nameTitle" id="left">name</h3>
+      <h3 class ="totalTitle">total</h3>
      </div>
 
 </div>
@@ -37,74 +42,98 @@
 <div id="entries-container">
 
   <div id="listItems">
-    <div class="listItem food">
+    <!-- <div class="listItem food">
       <p class="entry date" id="left">12/30/18</p>
       <p class="entry name" id="left">ITEM ONE</p>
-      <p class="entry price">500</p>
+      <p class="entry price">$500</p>
     </div>
     <div class="listItem bills">
       <p class="entry date" id="left">01/20/19</p>
       <p class="entry name" id="left">ITEM TWO</p>
-      <p class="entry price">200</p>
+      <p class="entry price">$200</p>
     </div>
     <div class="listItem clothing">
       <p class="entry date" id="left">01/24/19</p>
       <p class="entry name" id="left">TJ Maxxxxxxx</p>
-      <p class="entry price">400</p>
+      <p class="entry price">$400</p>
     </div>
     <div class="listItem food">
         <p class="entry date" id="left">12/30/18</p>
         <p class="entry name" id="left">Bought Doughnuts</p>
-        <p class="entry price">500</p>
+        <p class="entry price">$500</p>
       </div>
       <div class="listItem bills">
         <p class="entry date" id="left">01/20/19</p>
         <p class="entry name" id="left">TESTING LINE 63</p>
-        <p class="entry price">200</p>
+        <p class="entry price">$200</p>
       </div>
       <div class="listItem clothing">
         <p class="entry date" id="left">01/24/19</p>
         <p class="entry name" id="left">TJ Maxxxxxxx</p>
-        <p class="entry price">400</p>
+        <p class="entry price">$400</p>
       </div>
       <div class="listItem food">
           <p class="entry date" id="left">12/30/18</p>
           <p class="entry name" id="left">Bought Doughnuts</p>
-          <p class="entry price">500</p>
+          <p class="entry price">$500</p>
         </div>
         <div class="listItem bills">
           <p class="entry date" id="left">01/20/19</p>
           <p class="entry name" id="left">Dentist</p>
-          <p class="entry price">200</p>
+          <p class="entry price">$200</p>
         </div>
         <div class="listItem clothing">
           <p class="entry date" id="left">01/24/19</p>
           <p class="entry name" id="left">TJ Maxxxxxxx</p>
-          <p class="entry price">400</p>
-        </div>
-        
+          <p class="entry price">$400</p>
+        </div> -->
+
   </div>
 </div>
-<!-- <div class="spacer"></div> -->
-<!--
-<div id="parent">
-  <div class="box a b">A &amp; B</div>
-  <div class="box a">A</div>
-  <div class="box b">B</div>
-  <div class="box c">C</div>
-  <div class="box d">D</div>
-</div> -->
+<div class="seeTotals">
+  <div class="plusButton">
+    <h2>+</h2>
+  </div>
+  <div class="seeTotal">
+    <h2>See Totals</h2>
+  </div>
+</div>
+<div class="typeTotal">
+  <h2 class="types dollars blue">$</h2>
+  <h2 class="types percent">%</h2>
+</div>
+<div class="totalSpent">
+  <div class="totalsTesting amountSpent">
+
+  </div>
+  <div class="totalsTesting foodTotal">
+
+  </div>
+  <div class="totalsTesting billsTotal">
+
+  </div>
+  <div class="totalsTesting clothingTotal">
+
+  </div>
+  <div class="totalsTesting entertainmentTotal">
+
+  </div>
+  <div class="minimize">
+    <h2>-</h2>
+  </div>
+</div>
+
 <div id="footer-container">
       <div class ="button" id="new">
           <h2>NEW ENTRY</h2>
       </div>
 </div>
 
-<div id="newEntry" class="entry hide show">
+<div id="newEntry" class="formEntry hide show">
     <div class="modal">
 
     <div class="top">
-    <h2>New Entry</h2>
+    <h4>New Entry</h4>
     </div>
 
       <div class="inputAreas">
@@ -112,15 +141,15 @@
           <select id="spending-select">
             <option value="">-Choose A Category-</option>
             <option value="clothing">Clothing</option>
-            <option value="entertainment">Entertainment</option>
+            <option value="entertain">Entertainment</option>
             <option value="food">Food</option>
             <option value="bills">Bills</option>
           </select>
         </div>
 
-        <input class="dateOfEntry" type="date" id="today">
-        <input class="nameInput" type="text" id="nameOfItem" placeholder="What Did You Buy?">
-        <input class="amountSpent" type="number" min="0.01" step="0.01" placeholder="$0.00">
+        <input class="dateOfEntry" type="date" id="today" required>
+        <input class="nameInput" type="text" id="nameOfItem" placeholder="What Did You Buy?" required>
+        <input id="asdf" class="amountSpent" type="number" min="0.01" step="0.01" placeholder="$0.00" required>
 
       </div>
 
